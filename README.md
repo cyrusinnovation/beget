@@ -15,4 +15,6 @@ Usage
         $ lein gae stop  # Stops the development appserver
 
         $ lein uat       # Starts the dev server, runs end-to-end tests, and stops the server.
+							 					 # For this you need to add the Firefox binary to your PATH
+												 # E.g., >	export PATH=$PATH:/Applications/Firefox.app/Contents/MacOS
 
