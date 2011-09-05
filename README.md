@@ -10,5 +10,9 @@ Usage
 
         $ lein compile
 
-        $ dev_appserver.sh war
+        $ lein gae start # Starts the development appserver
+
+        $ lein gae stop  # Stops the development appserver
+
+        $ lein uat       # Starts the dev server, runs end-to-end tests, and stops the server.
 
