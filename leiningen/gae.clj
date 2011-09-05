@@ -1,4 +1,4 @@
-(ns leiningen.server
+(ns leiningen.gae
   (use [lancet.core :only [exec]])) ;; The exec ant task.
 
 (defn usage []
@@ -25,7 +25,7 @@
 (defn kill-appserver []
 	(run-shell-command "script/kill_appserver.sh"))
 
-(defn server [project & args]
+(defn gae [project & args]
 	(let [command (first args)]
 		(cond
 		 (empty? command) (usage)
