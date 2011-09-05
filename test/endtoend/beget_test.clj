@@ -5,8 +5,9 @@
 (import org.openqa.selenium.By)
 
 ;; Why isn't this working?
-;; (background (around :contents (let [driver (new FirefoxDriver)] ?form))
-;; 						(after  :contents (.quit driver)))
+;; (background (around :contents (let [driver (new FirefoxDriver)]
+;; 																?form
+;; 																(.quit driver))))
 
 (let [driver (new FirefoxDriver)]
 	;; This needs robustification so that the hostname and port used in leiningen to start the server
