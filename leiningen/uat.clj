@@ -3,6 +3,6 @@
 			 [leiningen.midje]))
 
 (defn uat [project & args]
-	(dev-appserver)
+	(dev-appserver project)
 	(midje project "endtoend.beget-test")
 	(kill-appserver))

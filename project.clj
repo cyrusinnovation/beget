@@ -1,7 +1,4 @@
-(def appserver-version "1.5.3")
-(def appserver-sdk-install-path (str "/usr/local/appengine-java-sdk-" appserver-version))
-(def appserver-address "localhost")
-(def appserver-port "8080")
+(let [appserver-version "1.5.3"]
 
 (defproject beget "0.2.0"
 	
@@ -22,5 +19,9 @@
 
 	:aot [beget]
   :compile-path "war/WEB-INF/classes/"
-  :library-path "war/WEB-INF/lib/")
-
+  :library-path "war/WEB-INF/lib/"
+	
+	:gae-appserver-sdk-install-path ~(str "/usr/local/appengine-java-sdk-" appserver-version)
+	:gae-appserver-address "localhost"
+	:gae-appserver-port "8080"
+))
