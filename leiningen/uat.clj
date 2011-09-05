@@ -1,7 +1,8 @@
 (ns leiningen.uat
-	(use [leiningen.core :only [dev-appserver kill-appserver]]))
+	(use [leiningen.server :only [dev-appserver kill-appserver]]
+			 [leiningen.midje]))
 
 (defn uat [project & args]
 	(dev-appserver)
-	(test project)
+	(midje project "endtoend.beget-test")
 	(kill-appserver))
