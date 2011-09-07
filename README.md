@@ -15,10 +15,11 @@ Usage
 
         $ lein gae stop  # Stops the development appserver
 
-        $ lein uat 		 # Starts the dev server, runs the end-to-end Selenium tests, and stops the server.
+        $ lein test 		 # Starts the dev server, runs the tests, and stops the server.
 						 # For this you also need to add the Firefox binary to your PATH
 						 # E.g.,  $>	export PATH=$PATH:/Applications/Firefox.app/Contents/MacOS
 
+				
 Running the server requires the [Google App Engine SDK](http://code.google.com/appengine/downloads.html). 
 You will need to edit the project.clj file to indicate the version
 number of the App Engine SDK as well as the path where it is installed.
