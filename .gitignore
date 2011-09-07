@@ -1,3 +1,5 @@
 .DS_Store
+.lein-failures
+/lib
 /war/WEB-INF/lib
 /war/WEB-INF/classes

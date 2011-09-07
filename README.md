@@ -1,7 +1,8 @@
 Beget
 =====
 
-Sample Google App Engine project with Clojure and Leiningen.
+Sample Google App Engine project with Clojure and Leiningen, now with
+server controls and Selenium tests.
 
 Usage
 =====
@@ -14,7 +15,12 @@ Usage
 
         $ lein gae stop  # Stops the development appserver
 
-        $ lein uat       # Starts the dev server, runs end-to-end tests, and stops the server.
-							 					 # For this you need to add the Firefox binary to your PATH
-												 # E.g., >	export PATH=$PATH:/Applications/Firefox.app/Contents/MacOS
+        $ lein uat 		 # Starts the dev server, runs the end-to-end Selenium tests, and stops the server.
+						 # For this you also need to add the Firefox binary to your PATH
+						 # E.g.,  $>	export PATH=$PATH:/Applications/Firefox.app/Contents/MacOS
 
+Running the server requires the [Google App Engine SDK](http://code.google.com/appengine/downloads.html). 
+You will need to edit the project.clj file to indicate the version
+number of the App Engine SDK as well as the path where it is installed.
+The shell scripts that start and stop the server (in the script/ directory) currently presuppose some flavor
+of UNIX, and have only been tested on OS X.
