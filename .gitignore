@@ -1,5 +1,6 @@
 .DS_Store
 .lein-failures
 /lib
+/logs
 /war/WEB-INF/lib
 /war/WEB-INF/classes
