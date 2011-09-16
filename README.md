@@ -2,7 +2,8 @@ Beget
 =====
 
 Sample Google App Engine project with Clojure and Leiningen, now with
-server controls and Selenium tests.
+server controls and Selenium tests. The tests are driven by Brian Marick's
+midje test framework.
 
 Usage
 =====
@@ -12,6 +13,8 @@ Usage
         $ lein compile
 
         $ lein gae start # Starts the development appserver
+
+        $ lein midje 		 # Runs the tests
 
         $ lein gae stop  # Stops the development appserver
 

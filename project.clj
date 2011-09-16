@@ -21,17 +21,9 @@
   :compile-path "war/WEB-INF/classes/"
   :library-path "war/WEB-INF/lib/"
 	
+	:hooks [leiningen.hooks.selenium-test-hook]
+  :implicit-hooks false
 	:gae-appserver-sdk-install-path ~(str "/usr/local/appengine-java-sdk-" appserver-version)
 	:gae-appserver-address "localhost"
 	:gae-appserver-port "8080"
 ))
-
-;; Running lein test will now start the server beforehand and stop it afterwards.
-;; In addition it will use lein-midje to run the tests, to generate better reports.
-(require '(leiningen test [gae :as server] [midje :as midje]))
-(add-hook #'leiningen.test/test
-          (fn [test project & args]
-            (server/dev-appserver project)
-            (midje/midje project)
-            (server/kill-appserver)))
-
