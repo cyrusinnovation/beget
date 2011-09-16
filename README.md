@@ -14,7 +14,7 @@ Usage
 
         $ lein gae start # Starts the development appserver
 
-        $ lein midje 		 # Runs the tests
+        $ lein midje 	# Runs the tests
 
         $ lein gae stop  # Stops the development appserver
 
